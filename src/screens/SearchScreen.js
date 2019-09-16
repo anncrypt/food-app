@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { Text, StyleSheet, ScrollView } from 'react-native';
 import SearchBar from '../components/SearchBar';
 import ResultsList from '../components/ResultsList';
 import useResults from '../hooks/useResults';
@@ -29,10 +29,12 @@ const SearchScreen = () => {
           titleText="Cost Effective" 
         />
         <ResultsList 
-          results={filterResultsByPrice('$$')} titleText="Bit Pricier" 
+          results={filterResultsByPrice('$$')} 
+          titleText="Bit Pricier" 
         />
         <ResultsList 
-          results={filterResultsByPrice('$$$')} titleText="Big Spender!"
+          results={filterResultsByPrice('$$$')} 
+          titleText="Big Spender!"
         />
       </ScrollView>
     </ >
